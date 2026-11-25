@@ -4,8 +4,9 @@ Carte web qui affiche instantanément les stations proposant du **gazole** et le
 
 - Données : [Prix des carburants en France – Flux instantané – v2](https://www.data.gouv.fr/fr/datasets/prix-des-carburants-en-france-flux-instantane-v2-amelioree/) (Ministère de l'Économie, Licence Ouverte), interrogées en direct via l'API Explore v2.1 de data.economie.gouv.fr (filtre `within_distance`).
 - Fond de carte : Plan IGN (Géoplateforme) avec Leaflet.
+- Enseignes : © contributeurs [OpenStreetMap](https://www.openstreetmap.org/copyright) (ODbL), via l'étiquette `ref:FR:prix-carburants`. Le fichier `brands.json` est régénéré chaque lundi par GitHub Actions (`scripts/build_brands.py` ; lancement manuel possible depuis l’onglet Actions).
 - Recherche d'adresse : service de géocodage de la Géoplateforme.
 
-Fonctions : géolocalisation, rayon modifiable (curseur ou saisie), position déplaçable (clic sur la carte ou glisser le point bleu), tri par prix ou distance, stations en rupture en option, liens d'itinéraire (Google Maps, Waze, Plans), actualisation automatique toutes les 5 minutes.
+Fonctions : géolocalisation, rayon modifiable (curseur ou saisie), position déplaçable (clic sur la carte ou glisser le point bleu), enseigne de chaque station, tri par prix ou distance, stations en rupture en option, liens d'itinéraire (Google Maps, Waze, Plans), actualisation automatique toutes les 5 minutes.
 
 Une seule page statique (`index.html`), sans compilation ni clé d'API. La géolocalisation nécessite HTTPS (GitHub Pages) ou `localhost`.
